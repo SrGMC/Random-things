@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shitty Login</title>
+    <style type="text/css">
+        html {
+            background-color: #2c3e50;
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial,sans-serif;
+        }
+
+        h2{
+            color: #2980b9;
+        }
+        h1{
+            color: #34495e;
+        }
+        .login{
+            margin: 20px 300px;
+            padding: 50px 10px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        .btn {
+          -webkit-border-radius: 5;
+          -moz-border-radius: 5;
+          border-radius: 5px;
+          font-family: Arial;
+          color: #ffffff;
+          font-size: 20px;
+          background: #2c3e50;
+          padding: 10px 20px 10px 20px;
+          text-decoration: none;
+        }
+
+        .btn:hover {
+          background: #3cb0fd;
+          background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+          background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+          background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+          background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+          background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+          text-decoration: none;
+        }
+
+        @media screen and (max-width: 900px){
+            .login{
+                margin: 0;
+                padding: 50px 5px;
+                border: 1px solid #000000;
+                border-radius: 5px;
+                background-color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <i><h1>Sign in to $WebPageName</h1></i>
+        <i>Made by <a href="http://reddit.com/u/Sr_GMC">Sr_GMC</a> for <a href="https://www.reddit.com/r/ProgrammerHumor/comments/8r9xua/so_ive_heard_we_are_now_making_logins_right/">r/ProgrammerHumor</a></i></br>
+        <h2>Username</h2>
+        <i>Choose the first letter of your username and then your username</i></br></br>
+        <input type="range" name="letter" id="letter" oninput="changeletter(this.value)" onchange="changeletter(this.value)" min="0" step="1" >
+        <p id="lettert">a</p>
+        <input type="range" name="username" id="username" oninput="changeusername(this.value)" onchange="changeusername(this.value)" min="0" step="1" >
+        <p id="usernamet"></p>
+        <h2>Password</h2>
+        <i>Choose your password</i></br></br>
+        <input type="range" name="password" id="password" oninput="changepassword(this.value)" onchange="changepassword(this.value)" min="0" step="1" >
+        <p id="passwordt"></p>
+        </br></br>
+        <a href="javascript:checklogin()" class="btn">Sign in</a></br></br></br>
+        <a href="javascript:forgot()">Forgot your password?</a></br></br></br>
+    </div>
+</body>
+<script type="text/javascript">
+    var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "undefined"];
+    var username = {
+        "a": ["awesomeman", "alexa"],
+        "b": ["bedsoft", "bayinspire"],
+        "c": ["chase", "Crysis"],
+        "d": ["DROP TABLE username;--", "dadishere"],
+        "e": ["earthware", "user2", "user3", "user4", "user5"],
+        "f": ["function checklogin()"],
+        "g": ["GravityPrincess", "GitHub", "GitLab"],
+        "h": ["HelpPls", "HawaiiMissileAlert"],
+        "i": ["ImRunningOutOfIdeas"],
+        "j": ["Jk"],
+        "k": ["KISrslyNeedHelp"],
+        "l": ["lolwat"],
+        "m": ["MyHeadHurts", "milkettela", "milkbrewer2000", "mssucks"],
+        "n": ["nanna", "nanny"],
+        "o": ["OhHiMark"],
+        "p": ["pokemaniac2000", "PrincessGravy", "PrincessGravity", "ProgrammerHumor"],
+        "q": ["Oqay", "QarmaOrKarma"],
+        "r": ["RateMyPC", "RateMyLinux", "Runescape"],
+        "s": ["Shabbyfeet", "StirUntilDone"],
+        "t": ["TraumaSir", "trashword"],
+        "u": ["UMommaFat", "UWotM8"],
+        "v": ["Vynil", "VolumeSliderIsBack"],
+        "w": ["WotM8"],
+        "x": ["XxX_UltraSniper_XxX","xyz", "XKCD"],
+        "y": ["yzx"],
+        "z": ["zi", "zyx"],
+        "undefined": ["null"]
+    };
+    var password = {
+        "a": ["pHgjZs9t", "buymesomecofe"],
+        "b": ["PNR6PuS2", "NymLbB6i"],
+        "c": ["bSJwyp2A", "canitrunit?"],
+        "d": ["DROP TABLE password;--", "password"],
+        "e": ["earthware", "user2", "user3", "user4", "user5"],
+        "f": ["function checkpassword()"],
+        "g": ["password", "Microsoft", "500Server Error"],
+        "h": ["2utT7Lb", "FailedTestAlert"],
+        "i": ["OrImNotRunningOutOfIdeas?"],
+        "j": ["fc2QPVFSbfhNzt3YXCCT"],
+        "k": ["KISrslyNeedHelp"],
+        "l": ["hahayes"],
+        "m": ["doctor", "CTNqgpXcxxmCcAwFkZze", "iluvmilk", "noitdoesnt"],
+        "n": ["nanny", "nanna"],
+        "o": ["ididnothither"],
+        "p": ["0123457689", "imaprincess", "owowatsdis", "hunter2"],
+        "q": ["password", "INeedSome"],
+        "r": ["password", "10/10", "10/10"],
+        "s": ["ewNNeDc65NSyuypLzPPD", "CookUntilDone"],
+        "t": ["M7dCZmsR2Gq3VAh28V3P", "password"],
+        "u": ["XAHkV99GTfHJfrKTDnt8", "LtsJmSNMRaZ4vmyfB7hJ"],
+        "v": ["uYYcyVSXpVJ7n7Vx6ZGk", "Pay200$toIncreaseVolume"],
+        "w": ["ultrasecurepassword"],
+        "x": ["XxX_UltraPassword_XxX","1234567890", "correct horse battery staple"],
+        "y": ["1234567890"],
+        "z": ["0987654321", "pHgjZs9t"],
+        "undefined": ["null"]
+    };
+
+    var current = "a";
+    document.getElementById("letter").max = letters.length-1;
+    document.getElementById("username").max = username[current].length-1;
+    document.getElementById("password").max = password[current].length-1;
+    document.getElementById("letter").value = 0;
+    changeusername(0);
+    changepassword(0);
+
+    function changeletter(value){
+        document.getElementById("lettert").innerHTML = letters[value];
+        document.getElementById("letter").value = value;
+        current = letters[value];
+        changeusername(0);
+        changepassword(0);
+    }
+
+    function changeusername(value){
+        document.getElementById("username").value = value;
+        document.getElementById("username").max = username[current].length-1;
+        document.getElementById("usernamet").innerHTML = username[current][value];
+    }
+    function changepassword(value){
+        document.getElementById("password").value = value;
+        document.getElementById("password").max = password[current].length-1;
+        document.getElementById("passwordt").innerHTML = password[current][value];
+    }
+
+    function checklogin(){
+        if(document.getElementById("username").value === document.getElementById("password").value){
+            alert("Error: Success! \nLogin in");
+        } else {
+            alert("Login information is incorrect. Have you tried matching the two sliders?");
+            //Prevent random attackers
+            changeletter(random(0, letters.length-1));
+        }
+    }
+    function forgot(){
+        alert("Oh... Ok, enter your password next time you want to login " + username[current][document.getElementById("username").value]);
+        alert("Logged in.\nYou can change your password in the following page");
+        document.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        // TODO: Increment ForgotPasswordCount object by 1
+    }
+
+    function random(min, max){
+        return Math.floor(Math.random()*(max-min+1)+min);
+    }
+</script>
+</html>

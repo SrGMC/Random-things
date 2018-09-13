@@ -1,0 +1,11 @@
+{
+  "name": "timetoshreks",
+  "version": "1.0.0",
+  "description": "Convert time to Shrek time. Idea taken from https://www.reddit.com/r/theydidthemonstermath/comments/8hbv07/how_many_shreks_until_my_birthday_october_26th/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@Sr_GMC",
+  "license": "ISC"
+}
