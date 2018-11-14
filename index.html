@@ -35,6 +35,10 @@
       <p><a href="https://www.bbc.com/news/technology-42787529">Facebook invented the flick</a>, a new time unit. Why don't we create a new one too?<br>
       Meet a Shrek, a time unit based on the length of the original Shrek film. Available for all your JavaScript projects.</p>
 
+      <h2><a href="https://srgmc.github.io/Random-things/things/8bitguy/index.html">8bit guy</a></h2>
+      <a href="https://srgmc.github.io/Random-things/things/8bitguy/index.html"><img alt="" src="assets/8bitguy_screenshot.png"></a>
+      <p>8Bit Guy is a game developed in Scratch, <span id="years"> </span> years ago by me and a friend. In Spanish</p>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/SrGMC/Random-things">Random Things</a> is maintained by <a href="https://srgmc.github.io/">Álvaro Galisteo</a>.</span>
       </footer>
@@ -42,4 +46,12 @@
     </section>
 
   </body>
+  <script type="text/javascript">
+    function calculateYears(year) {
+        var now = new Date();
+        return now.getFullYear() - year;
+    }
+
+    document.getElementById('years').innerHTML = calculateYears(2016);
+  </script>
 </html>

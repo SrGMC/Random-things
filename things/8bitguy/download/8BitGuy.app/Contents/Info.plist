@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>English</string>
+
+    <key>CFBundleExecutable</key>
+    <string>JavaAppLauncher</string>
+
+    <key>CFBundleIconFile</key>
+    <string>still.png.icns</string>
+
+    <key>CFBundleIdentifier</key>
+    <string>com.sampletext.8bitguy</string>
+
+    <key>CFBundleDisplayName</key>
+    <string>8Bit Guy</string>
+
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+
+    <key>CFBundleName</key>
+    <string>8Bit Guy</string>
+
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+
+    <key>NSPrincipalClass</key>
+    <string>NSApplication</string>
+    <key>NSHighResolutionCapable</key>
+    <string>True</string>
+
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.1</string>
+
+    <key>CFBundleSignature</key>
+    <string>????</string>
+
+    <key>CFBundleVersion</key>
+    <string>1.0.1</string>
+
+    <key>NSHumanReadableCopyright</key>
+    <string>(c) 2016 #SampleText</string>
+
+    
+
+    <key>JVMMainClassName</key>
+    <string>DesktopScratchViewer</string>
+
+    <key>JVMOptions</key>
+    <array>
+
+    </array>
+
+    <key>JVMArguments</key>
+    <array>
+
+    </array>
+    </dict>
+</plist>
