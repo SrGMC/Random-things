@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>/Volumes/SanDisk HD/Documents/Scratch/8bitguy.jar</jar>
+  <outfile>/Volumes/SanDisk HD/Documents/Scratch/8BitGuy.exe</outfile>
+  <errTitle>Se necesita Java para poder continuar</errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>/Volumes/SanDisk HD/Documents/Scratch/Assets/Player/still.ico</icon>
+  <singleInstance>
+    <mutexName>8bitguy</mutexName>
+    <windowTitle>8Bit Guy</windowTitle>
+  </singleInstance>
+  <jre>
+    <path></path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>1.6.0</minVersion>
+    <maxVersion>1.7.0</maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+    <initialHeapSize>512</initialHeapSize>
+    <maxHeapSize>1024</maxHeapSize>
+  </jre>
+</launch4jConfig>
