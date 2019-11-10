@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/SrGMC/twister/master/icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="transparent">
+
+    <title>Twister</title>
+
+    <!-- PureCSS stylessheets -->
+    <link rel="stylesheet" href="css/base-min.css">
+    <link rel="stylesheet" href="css/buttons-min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body id="body">
+    <h1 class="title" id="title">Twister</h1><br>
+    <h2 class="sub" id="sub">La ruleta para Twister inteligente</h2><br>
+    <div class="content">
+        <div id="players">
+            <h2 id="playernumber">Numero de jugadores:</h2>
+                </br>
+            <span id="count">2</span>
+                </br>
+            <button class="pure-button button-xlarge pure-button-primary" id="minus">-</button> <button class="pure-button button-xlarge pure-button-primary" id="plus">+</button>
+                </br></br>
+            <button class="button-xlarge button-success pure-button" id="set">Confirmar</button>
+        </div>
+        <div id="roulette">
+            <h2 id="player">&nbsp;</h2>
+            <h2 id="bodypart">Pulsa tirar para comenzar</h2>
+            <h2 id="color"></h2>
+                </br></br>
+            <button class="button-xlarge button-success pure-button" id="spin">Tirar</button>
+            <div id="removeplayer">
+                <span id="disqualify">Descalificar jugador</span></br>
+            </div>
+        </div>
+        <div id="end">
+            <h1 id="endtitle"></h1>
+            <button class="button-xlarge button-success pure-button" onclick="location.reload();" id="reload">Volver a jugar</button>
+        </div>
+        <footer class="copyright"><span id="lang">Idioma</span>: <a href="index.html?lang=es">es</a> <a href="index.html?lang=en">en</a> <a href="index.html?lang=fr">fr</a> - <span id="madeby">Hecho por</span> <a href="http://srgmc.github.io">Álvaro Galisteo</a>. <a href="https://github.com/SrGMC/twister" id="source">Código fuente</a></footer>
+    </div>
+
+    <!-- Custom JS -->
+    <script type="text/javascript" src="js/language.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
